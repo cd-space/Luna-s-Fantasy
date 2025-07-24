@@ -15,18 +15,18 @@ public class Potion : MonoBehaviour
                 return;
             };
             lunaController.ChangeHeath(1);
-            Destroy(gameObject); // Ïú»ÙÒ©Ë®¶ÔÏó
+            Destroy(gameObject); // é”€æ¯è¯æ°´å¯¹è±¡
         }
     }
 
-    ////´¥·¢Æ÷ÄÚÊ±³ÖĞøµ÷ÓÃ
+    ////äººç‰©å¾…åœ¨è§¦å‘å™¨æ—¶
     //private void OnTriggerStay2D(Collider2D collision)
     //{
         
     //}
 
 
-    ////´¥·¢Æ÷³öÀ´Ê±µ÷ÓÃ
+    ////äººç‰©ç¦»å¼€è§¦å‘å™¨æ—¶
     //private void OnTriggerExit2D(Collider2D collision)
     //{
         

@@ -7,8 +7,8 @@ public class LunaController : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     private Vector2 movement;
     public float moveSpeed = 4;
-    private int maxHealth = 5;//×î´óÉúÃüÖµ
-    private int currentHealth;//Lunaµ±Ç°ÉúÃüÖµ
+    private int maxHealth = 5;//Lunaçš„æœ€å¤§å¥åº·å€¼
+    private int currentHealth;//Lunaçš„å½“å‰å¥åº·å€¼
 
     public int CurrentHealth { get => currentHealth; }
     public int MaxHealth { get => maxHealth;}
@@ -16,7 +16,7 @@ public class LunaController : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth; // ³õÊ¼»¯µ±Ç°ÉúÃüÖµÎª×î´óÉúÃüÖµ
+        currentHealth = maxHealth; // åˆå§‹åŒ–å½“å‰å¥åº·å€¼ä¸ºæœ€å¤§å¥åº·å€¼
     }
 
     void Update()
