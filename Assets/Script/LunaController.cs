@@ -6,12 +6,17 @@ public class LunaController : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
     private Vector2 movement;
-    public float moveSpeed;
+    public float moveSpeed = 4;
+    private int maxHealth = 5;//最大生命值
+    private int currentHealth;//Luna当前生命值
+
+    public int CurrentHealth { get => currentHealth; }
+    public int MaxHealth { get => maxHealth;}
 
     void Start()
     {
-        moveSpeed = 4;
         rigidbody2d = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth; // 初始化当前生命值为最大生命值
     }
 
     void Update()
@@ -25,5 +30,10 @@ public class LunaController : MonoBehaviour
     {
         Vector2 position = rigidbody2d.position + movement * moveSpeed * Time.fixedDeltaTime;
         rigidbody2d.MovePosition(position);
+    }
+
+    public void ChangeHeath( int amount)
+    {
+        currentHealth = Mathf.Clamp(CurrentHealth + amount, 0, maxHealth);
     }
 }
